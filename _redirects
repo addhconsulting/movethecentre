@@ -1,0 +1,2 @@
+# Send www to the bare domain
+https://www.movethecentre.org/* https://movethecentre.org/:splat 301!

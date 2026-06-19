@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>An Open Letter to Andy Burnham — Move the Centre</title>
+<meta name="description" content="An open letter to Andy Burnham, Mayor of Greater Manchester and MP for Makerfield: on the soft cage, proximity, and moving the centre." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Move the Centre" />
+<meta property="og:title" content="An Open Letter to Andy Burnham — Move the Centre" />
+<meta property="og:description" content="An open letter to Andy Burnham, Mayor of Greater Manchester and MP for Makerfield: on the soft cage, proximity, and moving the centre." />
+<meta property="og:url" content="https://movethecentre.org/letter" />
+<meta property="og:image" content="https://movethecentre.org/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="An Open Letter to Andy Burnham — Move the Centre" />
+<meta name="twitter:description" content="An open letter to Andy Burnham, Mayor of Greater Manchester and MP for Makerfield: on the soft cage, proximity, and moving the centre." />
+<meta name="twitter:image" content="https://movethecentre.org/og.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+/* ===========================================================
+   MOVE THE CENTRE — stylesheet
+   Warm editorial identity: ink + paper, single civic-bronze accent.
+   Deliberately non-political. Signature: the "moved centre" frame.
+   =========================================================== */
+:root{
+  --ink:#1A1713;            /* warm near-black */
+  --ink-soft:#3A352D;
+  --ink-mute:#6B6256;
+  --stone:#928777;
+  --paper:#F4EFE5;          /* dominant warm paper */
+  --paper-2:#EDE6D8;        /* deeper bone band */
+  --paper-3:#E4DAC8;
+  --card:#FAF6EE;
+  --ink-deep:#16130E;       /* dramatic dark band */
+  --ink-deep-2:#211C15;
+  --bronze:#9A6634;         /* civic-bronze accent */
+  --bronze-deep:#754B23;
+  --bronze-soft:#BD8B58;
+  --brass:#CDA063;          /* accent on dark only */
+  --line:rgba(26,23,19,.14);
+  --line-2:rgba(26,23,19,.07);
+  --line-light:rgba(244,239,229,.16);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Spectral",Georgia,serif;
+  --mono:"Spline Sans Mono",ui-monospace,monospace;
+  --measure:64ch;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-weight:400;font-size:1.09rem;line-height:1.78;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  position:relative;overflow-x:hidden;
+}
+/* paper grain — subtle premium texture */
+body::after{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+a{color:inherit}
+img{max-width:100%}
+::selection{background:rgba(154,102,52,.22)}
+:focus-visible{outline:2.5px solid var(--bronze);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;z-index:1000;font-family:var(--mono);font-size:.8rem;text-decoration:none}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- layout primitives ---------- */
+.wrap{width:min(100% - 2.8rem, 1080px);margin-inline:auto}
+.wrap.narrow,.narrow{max-width:760px}
+.band{padding:clamp(3.6rem,8vw,7rem) 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze-deep);font-weight:500}
+.eyebrow::before{content:"";width:1.7rem;height:1px;background:var(--bronze);opacity:.7}
+.lead{font-size:clamp(1.2rem,2.3vw,1.55rem);line-height:1.6;color:var(--ink-soft);font-weight:400}
+.prose p{max-width:var(--measure);margin-bottom:1.2rem}
+.prose p strong{font-weight:600;color:var(--ink)}
+.prose em{font-style:italic}
+.muted{color:var(--ink-mute)}
+.hr{height:1px;background:var(--line);border:0;margin:2.6rem 0;max-width:var(--measure)}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.014em;line-height:1.07;color:var(--ink)}
+h2.section-title{font-size:clamp(1.8rem,3.7vw,2.7rem);margin-bottom:1.2rem}
+h3{font-size:1.3rem;letter-spacing:-.01em}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(244,239,229,.82);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid var(--line)}
+.topbar .inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.brand{display:flex;align-items:center;gap:.62rem;text-decoration:none;color:var(--ink);flex:none}
+.brand .mark{width:26px;height:26px;flex:none;transition:transform .5s var(--ease)}
+.brand:hover .mark{transform:rotate(45deg)}
+.brand .bn{font-family:var(--display);font-weight:600;font-size:1.12rem;letter-spacing:-.01em}
+.nav{display:flex;align-items:center;gap:1.6rem;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;flex-wrap:nowrap}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none;transition:color .2s;padding:.2rem 0;border-bottom:1px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.nav a.active{color:var(--ink);border-bottom-color:var(--bronze)}
+.nav a.book{color:var(--bronze-deep)}
+@media(max-width:760px){.nav{gap:1.15rem}.nav a{font-size:.7rem;letter-spacing:.05em}.brand .bn{font-size:1.02rem}}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(3.8rem,11vw,8rem) 0 clamp(3.2rem,7vw,6rem);overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:-9%;right:-14%;width:min(58vw,680px);aspect-ratio:1;z-index:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%239A6634' stroke-width='1.1'%3E%3Crect x='40' y='40' width='470' height='470' rx='12'/%3E%3Crect x='112' y='100' width='372' height='372' rx='9'/%3E%3Crect x='190' y='168' width='268' height='268' rx='8'/%3E%3Crect x='270' y='238' width='172' height='172' rx='6'/%3E%3C/g%3E%3Crect x='340' y='302' width='46' height='46' rx='6' fill='%239A6634'/%3E%3C/svg%3E") center/contain no-repeat;
+  opacity:.14;animation:drift 26s ease-in-out infinite alternate;
+}
+@keyframes drift{from{transform:translate(0,0) rotate(0deg)}to{transform:translate(-14px,16px) rotate(4deg)}}
+.hero .wrap{position:relative;z-index:2}
+.hero .kicker{margin-bottom:1.8rem}
+.hero h1{font-size:clamp(2.6rem,7.4vw,5.2rem);font-weight:600;max-width:15ch;margin-bottom:1.6rem;letter-spacing:-.026em;line-height:.99}
+.hero h1 em{font-style:italic;color:var(--bronze-deep)}
+.hero .lead{max-width:56ch;margin-bottom:2.3rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+
+/* hero load sequence */
+.hero .kicker,.hero h1,.hero .lead,.hero .cta-row{opacity:0;transform:translateY(18px);animation:rise .9s var(--ease) forwards}
+.hero h1{animation-delay:.08s}.hero .lead{animation-delay:.2s}.hero .cta-row{animation-delay:.32s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .hero .kicker,.hero h1,.hero .lead,.hero .cta-row{opacity:1;transform:none;animation:none}
+  .hero::before{animation:none}
+}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.79rem;letter-spacing:.05em;text-transform:uppercase;font-weight:500;text-decoration:none;padding:.85rem 1.4rem;border-radius:2px;transition:transform .16s var(--ease),background .2s,color .2s,border-color .2s,box-shadow .2s;cursor:pointer;border:1px solid transparent}
+.btn-solid{background:var(--ink);color:var(--paper);box-shadow:0 12px 30px -18px rgba(26,23,19,.8)}
+.btn-solid:hover{background:#2A251D;transform:translateY(-2px);box-shadow:0 18px 34px -16px rgba(26,23,19,.7)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-line:hover{border-color:var(--bronze);color:var(--bronze-deep);transform:translateY(-1px)}
+.btn-sepia{background:var(--bronze);color:#fff;box-shadow:0 12px 30px -18px rgba(154,102,52,.9)}
+.btn-sepia:hover{background:var(--bronze-deep);transform:translateY(-2px)}
+
+/* ---------- dark centrepiece band ---------- */
+.band-ink{background:var(--ink-deep);color:var(--paper);position:relative;overflow:hidden}
+.band-ink::before{
+  content:"";position:absolute;left:-10%;bottom:-30%;width:min(46vw,520px);aspect-ratio:1;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%23CDA063' stroke-width='1.1'%3E%3Crect x='40' y='40' width='470' height='470' rx='12'/%3E%3Crect x='112' y='100' width='372' height='372' rx='9'/%3E%3Crect x='190' y='168' width='268' height='268' rx='8'/%3E%3C/g%3E%3Crect x='300' y='270' width='150' height='150' rx='6' fill='none' stroke='%23CDA063' stroke-width='1.1'/%3E%3Crect x='360' y='326' width='44' height='44' rx='5' fill='%23CDA063'/%3E%3C/svg%3E") center/contain no-repeat;
+  opacity:.13;
+}
+.band-ink .wrap{position:relative;z-index:2}
+.band-ink .eyebrow{color:var(--brass)}
+.band-ink .eyebrow::before{background:var(--brass)}
+.band-ink h1,.band-ink h2,.band-ink h3{color:var(--paper)}
+.band-ink .statement{color:var(--paper)}
+.band-ink .statement em{color:var(--brass)}
+.band-ink .muted{color:rgba(244,239,229,.6)}
+
+/* ---------- statement + three lines ---------- */
+.statement{max-width:22ch;font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,4.4vw,3rem);line-height:1.1;letter-spacing:-.02em}
+.statement em{font-style:italic;color:var(--bronze-deep)}
+.tenet-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-light);margin-top:.4rem}
+.band-ink .tenet-row{border-top-color:var(--line-light)}
+.tenet{padding:1.9rem 1.5rem 0 0;border-right:1px solid var(--line-light)}
+.tenet:last-child{border-right:0}
+.tenet .tl{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:.8rem}
+.tenet p{font-family:var(--display);font-weight:500;font-size:1.3rem;line-height:1.22;color:var(--paper)}
+@media(max-width:720px){.tenet-row{grid-template-columns:1fr}.tenet{border-right:0;border-bottom:1px solid var(--line-light);padding:1.5rem 0}.tenet:last-child{border-bottom:0}}
+
+/* ---------- defined-term lists ---------- */
+.terms{list-style:none;border-top:1px solid var(--line);max-width:var(--measure)}
+.terms li{padding:1.6rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start}
+.terms .tnum{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--bronze);line-height:1;padding-top:.1rem;min-width:2ch}
+.terms h3{margin-bottom:.4rem}
+.terms .ev{display:inline-block;margin-top:.7rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;color:var(--ink-mute);text-transform:uppercase;border:1px solid var(--line);border-radius:2px;padding:.3rem .6rem}
+@media(max-width:560px){.terms li{grid-template-columns:1fr;gap:.4rem}}
+
+/* ---------- idea cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;margin-top:.5rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1.9rem 1.7rem;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:.65rem;transition:transform .2s var(--ease),border-color .2s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);border-color:var(--bronze);box-shadow:0 30px 50px -36px rgba(26,23,19,.55)}
+.card .ci{font-family:var(--mono);font-size:.69rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze-deep)}
+.card h3{font-size:1.45rem}
+.card p{color:var(--ink-soft);font-size:1rem;line-height:1.6}
+.card .go{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-top:auto;transition:color .2s,letter-spacing .2s}
+.card:hover .go{color:var(--bronze-deep);letter-spacing:.1em}
+@media(max-width:820px){.cards{grid-template-columns:1fr}}
+
+/* ---------- evidence / feature block ---------- */
+.feature{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--bronze);border-radius:4px;padding:clamp(1.6rem,4vw,2.6rem);max-width:var(--measure)}
+.feature .fk{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze-deep);margin-bottom:.8rem}
+.feature h3{font-size:1.5rem;margin-bottom:.9rem}
+
+/* ---------- table ---------- */
+.tbl{width:100%;max-width:var(--measure);border-collapse:collapse;margin:1.5rem 0;font-size:.98rem}
+.tbl caption{text-align:left;font-family:var(--mono);font-size:.71rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:.9rem}
+.tbl th,.tbl td{text-align:left;padding:.75rem .8rem;border-bottom:1px solid var(--line)}
+.tbl thead th{font-family:var(--mono);font-size:.69rem;letter-spacing:.06em;text-transform:uppercase;color:var(--bronze-deep);border-bottom:1.5px solid var(--stone)}
+.tbl td:first-child{font-family:var(--body)}
+.tbl td:not(:first-child){font-family:var(--mono);font-size:.85rem;white-space:nowrap;color:var(--ink-soft)}
+.tbl tbody tr:hover{background:rgba(154,102,52,.045)}
+
+/* ---------- letter ---------- */
+.letterwrap .prose p:first-of-type::first-letter{
+  font-family:var(--display);font-weight:600;float:left;font-size:3.6rem;line-height:.72;
+  padding:.32rem .5rem 0 0;color:var(--bronze-deep);
+}
+.sign p{max-width:var(--measure)}
+
+/* ---------- book page ---------- */
+.book-grid{display:grid;grid-template-columns:300px 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+@media(max-width:820px){.book-grid{grid-template-columns:1fr;gap:2.4rem;justify-items:start}}
+.cover{aspect-ratio:2/3;background:linear-gradient(160deg,#2C2620,#1C1813 60%,#141009);border-radius:5px;padding:2rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 50px 80px -38px rgba(26,23,19,.8),inset 0 0 0 1px rgba(205,160,99,.18);position:relative;overflow:hidden;max-width:300px;width:100%}
+.cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--bronze),var(--bronze-deep));opacity:.85}
+.cover::after{content:"";position:absolute;left:2rem;right:2rem;top:50%;height:1px;background:rgba(205,160,99,.32)}
+.cover .ct{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);position:relative;z-index:2}
+.cover .ctitle{font-family:var(--display);font-weight:600;font-size:clamp(2rem,4vw,2.6rem);line-height:.98;color:var(--paper);letter-spacing:-.012em;position:relative;z-index:2}
+.cover .csub{font-family:var(--body);font-style:italic;font-size:.9rem;color:#CFC4B1;position:relative;z-index:2;margin-top:.55rem;line-height:1.4}
+.cover .cauth{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:#B9AE9B;position:relative;z-index:2}
+.excerpt{position:relative;padding:.6rem 0 .6rem 2rem;margin:1.8rem 0;max-width:var(--measure)}
+.excerpt::before{content:"\201C";position:absolute;left:-.2rem;top:1.1rem;font-family:var(--display);font-size:4rem;line-height:0;color:var(--bronze);opacity:.5}
+.excerpt p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.2rem,2.6vw,1.5rem);line-height:1.5;color:var(--ink-soft)}
+.parts{list-style:none;border-top:1px solid var(--line);max-width:var(--measure);margin:1.4rem 0 1.8rem}
+.parts li{padding:.9rem 0;border-bottom:1px solid var(--line);display:flex;gap:1.1rem;align-items:baseline}
+.parts .pl{font-family:var(--mono);font-size:.71rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze-deep);flex:none;width:6.5rem}
+
+/* ---------- share + signup ---------- */
+.share-row{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.5rem 0}
+.share-btn{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;font-weight:500;text-decoration:none;padding:.72rem 1.1rem;border-radius:2px;border:1px solid var(--line);color:var(--ink);background:var(--card);transition:transform .16s var(--ease),border-color .2s,color .2s}
+.share-btn:hover{transform:translateY(-2px);border-color:var(--bronze);color:var(--bronze-deep)}
+.share-btn svg{width:16px;height:16px;flex:none}
+.signup{max-width:540px;margin-top:1.5rem}
+.signup label{display:block;font-family:var(--mono);font-size:.71rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bronze-deep);margin-bottom:.7rem}
+.signup .field{display:flex;gap:.6rem;flex-wrap:wrap}
+.signup input[type=email]{flex:1 1 240px;font-family:var(--body);font-size:1rem;padding:.85rem 1rem;border:1px solid var(--line);border-radius:2px;background:var(--card);color:var(--ink)}
+.signup input[type=email]:focus{outline:2px solid var(--bronze);border-color:var(--bronze)}
+.signup .hint{font-family:var(--mono);font-size:.67rem;letter-spacing:.03em;color:var(--ink-mute);margin-top:.8rem;line-height:1.5}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink-deep);color:rgba(244,239,229,.66);padding:3.4rem 0 2.8rem}
+.foot-grid{display:flex;justify-content:space-between;gap:2.4rem;flex-wrap:wrap;align-items:flex-start}
+.foot .fb{font-family:var(--display);font-weight:600;font-size:1.4rem;color:var(--paper);display:flex;align-items:center;gap:.5rem}
+.foot .fnav{display:flex;flex-direction:column;gap:.55rem}
+.foot .fnav a{font-family:var(--mono);font-size:.73rem;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;color:rgba(244,239,229,.62)}
+.foot .fnav a:hover{color:var(--brass)}
+.foot .disc{font-family:var(--body);font-size:.9rem;max-width:44ch;line-height:1.6;color:rgba(244,239,229,.62)}
+.foot .disc a{color:var(--brass)}
+.foot .legal{width:100%;border-top:1px solid var(--line-light);margin-top:2rem;padding-top:1.5rem;font-family:var(--mono);font-size:.67rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(244,239,229,.45)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- references ---------- */
+sup.ref{font-family:var(--mono);font-size:.6em;line-height:0;vertical-align:super;font-weight:500}
+sup.ref a{color:var(--bronze-deep);text-decoration:none;padding:0 .08em}
+sup.ref a:hover{text-decoration:underline}
+.band-ink sup.ref a{color:var(--brass)}
+.refs{background:var(--paper-2)}
+.refs h2{font-size:1.45rem;margin-bottom:1.2rem}
+.refs ol{list-style:none;counter-reset:r;max-width:var(--measure)}
+.refs li{counter-increment:r;position:relative;padding:.8rem 0 .8rem 2.4rem;border-bottom:1px solid var(--line-2);font-family:var(--body);font-size:.92rem;line-height:1.55;color:var(--ink-soft)}
+.refs li::before{content:counter(r);position:absolute;left:0;top:.82rem;font-family:var(--mono);font-size:.72rem;color:var(--bronze-deep)}
+.refs li a{color:var(--bronze-deep);text-decoration:underline;text-underline-offset:2px;word-break:break-word}
+.refs li.note{font-style:italic;color:var(--ink-mute);padding-left:0}
+.refs li.note::before{content:""}
+
+/* ---------- section divider rhythm ---------- */
+.band + .band:not(.band-ink):not(.refs):not(.hero){border-top:1px solid var(--line-2)}
+
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="topbar"><div class="wrap inner">
+  <a class="brand" href="index.html" aria-label="Move the Centre — home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="#9A6634" stroke-width="1.5"><rect x="3.5" y="3.5" width="25" height="25" rx="2"/><rect x="8.5" y="9" width="16" height="16" rx="1.5"/></g><rect x="16" y="16" width="7" height="7" rx="1" fill="#9A6634"/></svg><span class="bn">Move the Centre</span></a>
+  <nav class="nav" aria-label="Primary"><a href="index.html" class="">The argument</a><a href="letter.html" class="active ">The letter</a><a href="thesoftcage.html" class="book">The book</a></nav>
+</div></header>
+<main id="main">
+
+<section class="hero band" style="padding-bottom:clamp(1.6rem,4vw,2.6rem)"><div class="wrap">
+  <p class="eyebrow kicker">An open letter</p>
+  <h1>Dear Andy <em>Burnham,</em></h1>
+  <p class="lead">An open letter to the Mayor of Greater Manchester and Member of Parliament for Makerfield &mdash; on the soft cage, the principle that unlocks it, and one reform that could change the country.</p>
+</div></section>
+
+<section class="band letterwrap" style="padding-top:0"><div class="wrap narrow prose">
+  <p>I am writing to you not as a party activist, and not as someone seeking office or favour, but as a citizen who has spent a long time trying to name what has gone wrong with the way Britain is governed &mdash; and who has become convinced that you, more than any other figure in our public life, already understand the answer in your bones.</p>
+  <p>Let me state the problem plainly, because I think you will recognise it. Britain has not been losing its freedom to some dramatic tyranny. It has been losing it to distance. Decade by decade, and under governments of every colour, the power that acts on people&rsquo;s lives has drifted further and further from the people it acts upon. The bank that freezes an account without a reason; the algorithm that flags an innocent face; the magistrate who convicts by a letter that never arrived; the department that rations an operation from two hundred miles away &mdash; in every case, power and accountability have been allowed to live in different places. I have come to call the result the soft cage: not a prison, but a structure of polite, procedural, low-level supervision that no one ever voted for and that no one quite knows how to answer.</p>
+  <p>I have written a book about this &mdash; <em>The Soft Cage</em> &mdash; and the more I worked on it, the clearer one principle became. If the cage is built of distance, the key is proximity. The whole argument reduces to a single line: no power over a citizen without a face the citizen can reach. Power and accountability must share a postcode. And the instinct that follows is not the weary managerial one &mdash; manage the discontent, monitor the risk &mdash; but a builder&rsquo;s instinct: build, don&rsquo;t bully.</p>
+  <p>I am writing to you specifically because you have spent your time as Mayor of Greater Manchester demonstrating that this is not a theory but a practice. You took back control of the buses and ran them better. You built a politics whose mandate comes from a place rather than from patronage in a distant capital. And on at least one occasion the whole country remembers, you stood on the steps of your own city and refused to let the centre treat its people as a line in a spreadsheet. That was a place holding power to account &mdash; the very principle of this book, made real in a single afternoon. And now, as Member of Parliament for Makerfield while remaining Mayor of Greater Manchester, you stand in both of the worlds this letter is about at once: the distant centre that has drifted out of people&rsquo;s reach, and the place that still answers for itself.</p>
+
+  <p class="statement" style="margin:1.9rem 0;color:var(--bronze-deep)">Move the <em>centre.</em></p>
+
+  <p>I mean it literally. Take Parliament out of London and let it sit, on rotation, between Birmingham and Manchester &mdash; six months in each, in a new chamber built to house a different kind of politics altogether. The rotation is the heart of the geography: by refusing to crown a single new capital, the reform becomes a shared national project rather than a regional prize, binds the Midlands and the North into a common cause, and makes the point unmistakable &mdash; that political power belongs to the country, not to one square mile of it.</p>
+  <p>But the building itself is not a detail &mdash; it is the point. The book argues for a proportional voting system, one that ends the manufactured majorities of the present arrangement and produces a Parliament that is genuinely multi-vocal: many parties, real coalitions, a spectrum of opinion rather than two opposing blocs. You cannot house that politics in the chamber we have. Westminster&rsquo;s geometry &mdash; two sets of benches facing each other at the length of two drawn swords &mdash; is the two-party system rendered in oak and stone, built for confrontation and quietly enforcing it. A multi-vocal, proportionally representative Parliament needs a multi-vocal setting: a chamber in the round, where members sit across a spectrum and face a common centre, where coalitions can form and negotiate in the open. It is no accident that the Scottish Parliament, the Senedd and most of Europe&rsquo;s legislatures are built as hemicycles; they were designed for the plural politics we have so far refused ourselves.</p>
+  <p>And the cost, so often the first objection, is the weakest of all: a one-off outlay that amortises to a rounding error against the savings a capable state unlocks. Britain has already run a smaller version &mdash; the BBC&rsquo;s move to Salford &mdash; and its honest, mixed result teaches the real lesson: move the whole ecosystem, not one institution, and give it time.</p>
+  <p>Moving the centre is the most visible part of a larger idea, which the book calls the Civic Capacity Covenant: that a government must build, protect its citizens from concentrated private power, represent the whole country, restrain itself under the rule of law, and leave people materially freer than it found them. It is neither left nor right. And it is costed to be funded largely by reallocation, not by money the country does not have.</p>
+  <p>I should be clear about what this letter is and is not. It is not an endorsement, and you have not asked for it; it is one citizen&rsquo;s argument, offered in good faith. A renewal that depended on a single person would betray its own thesis &mdash; that these instincts must be built into the country&rsquo;s structures so they outlast whoever holds office. But the spine of the argument &mdash; place before party, competence before spectacle, power made answerable to the people it acts upon &mdash; is yours already, more than anyone&rsquo;s. That is why I am writing to you.</p>
+  <p>Britain does not need to abandon its traditions. It needs to stop confusing tradition with permanence. There are moments when politicians merely manage decline, and moments when they reshape the direction of a country. I believe we are at one of the latter &mdash; and that the argument finds its most natural advocate in you.</p>
+  <div class="sign" style="margin-top:2rem">
+    <p style="margin-bottom:.5rem">Yours sincerely,</p>
+    <p style="font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--ink)">Adam Heath</p>
+    <p class="muted" style="font-style:italic">Author of <em>The Soft Cage</em></p>
+  </div>
+  <div class="cta-row" style="margin-top:2.2rem">
+    <a href="index.html#move" class="btn btn-sepia">The argument in full &rarr;</a>
+    <a href="thesoftcage.html" class="btn btn-line">The book</a>
+  </div>
+</div></section>
+
+</main>
+<footer class="foot"><div class="wrap foot-grid">
+  <div>
+    <p class="fb"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="#CDA063" stroke-width="1.5"><rect x="3.5" y="3.5" width="25" height="25" rx="2"/><rect x="8.5" y="9" width="16" height="16" rx="1.5"/></g><rect x="16" y="16" width="7" height="7" rx="1" fill="#CDA063"/></svg>Move the Centre</p>
+    <p style="font-family:var(--mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(244,239,229,.5);margin-top:.6rem">An independent argument by Adam Heath</p>
+  </div>
+  <nav class="fnav" aria-label="Footer">
+    <a href="index.html">The argument</a><a href="letter.html">The letter</a><a href="thesoftcage.html">The Soft Cage</a>
+  </nav>
+  <p class="disc">An independent project of ideas and argument. It is not affiliated with or endorsed by any political party or office-holder. The views are the author&rsquo;s own. Get in touch: <a href="mailto:hello@movethecentre.org">hello@movethecentre.org</a>.</p>
+  <p class="legal">&copy; <span class="yr"></span> Adam Heath &middot; Move the Centre</p>
+</div></footer>
+<script>
+(function(){
+  var url=(location.protocol.indexOf('http')===0)?location.origin+location.pathname:(document.querySelector('meta[property="og:url"]')||{}).content||'https://movethecentre.org/';
+  var t=encodeURIComponent('Move the centre: bring power back within reach of the people it acts upon.');
+  var u=encodeURIComponent(url);
+  var s=function(id,h){var e=document.getElementById(id);if(e)e.href=h;};
+  s('sh-fb','https://www.facebook.com/sharer/sharer.php?u='+u);
+  s('sh-li','https://www.linkedin.com/sharing/share-offsite/?url='+u);
+  s('sh-x','https://twitter.com/intent/tweet?url='+u+'&text='+t);
+  ['sh-fb','sh-li','sh-x'].forEach(function(id){var e=document.getElementById(id);if(e)e.addEventListener('click',function(ev){ev.preventDefault();window.open(this.href,'share','width=620,height=560,noopener');});});
+  var cp=document.getElementById('sh-copy');
+  if(cp)cp.addEventListener('click',function(ev){ev.preventDefault();var l=document.getElementById('cl');var d=function(){if(l){l.textContent='Copied';setTimeout(function(){l.textContent='Copy link';},1700);}};if(navigator.clipboard){navigator.clipboard.writeText(url).then(d,d);}else d();});
+  Array.prototype.forEach.call(document.querySelectorAll('.yr'),function(e){e.textContent=new Date().getFullYear();});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(e){io.observe(e);});
+  } else {document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
